@@ -38,37 +38,37 @@ Container I'm using in this method was created and is maintained by **olbat** an
 
 3. Run (double click) "initial-run.sh" script
 
-> [!NOTE]
-> After running this script you can safely delete it
-
-> [!NOTE]
-> If page with admin properties will not open in your browser and file will be deleted than you open it using <http://127.0.0.1:1024>
+  > [!NOTE]
+  > After running this script you can safely delete it
+  
+  > [!NOTE]
+  > If page with admin properties will not open in your browser and file will be deleted than you open it using <http://127.0.0.1:1024>
 
 4. Configure your printer as you would normally in CUPS and make sure it is set up as **Default** one there (see "cups-example-configuration.md" for example config of network printer)
 
-> [!CAUTION]
-> For script to work Default Printer need to be set up. Otherwise script neet to be modified with -p option to give printer name
-
-> [!CAUTION]
-> Make sure that "printers.conf" file showed up in "/home/deck/print/cups/" folder after you finish configuration (can take few seconds after finishing configuration)
-
-> [!NOTE]
-> At some point server might ask you about user / password - it is `print` / `print`
-
-> [!NOTE]
-> You should set up printer you'd like to use as default by going "Printers" tab > click on your printer name > click on "Administration" option (NOT Tab) > chose "Set As Server Default"
-
-> [!NOTE]
-> As port 631 is being redirected to 1024 from container (without root privileges we cannot bind ports under 1024) some steps might fail when CUPS server configuration pages will be reloading. In such case simply go back to <http://127.0.0.1:1024> and continue. Port can be changed in CUPS config file but would later require redirection to proper port using lpr command so for simplicity I'm skipping it.
+  > [!CAUTION]
+  > For script to work Default Printer need to be set up. Otherwise script neet to be modified with -p option to give printer name
+  
+  > [!CAUTION]
+  > Make sure that "printers.conf" file showed up in "/home/deck/print/cups/" folder after you finish configuration (can take few seconds after finishing configuration)
+  
+  > [!NOTE]
+  > At some point server might ask you about user / password - it is `print` / `print`
+  
+  > [!NOTE]
+  > You should set up printer you'd like to use as default by going "Printers" tab > click on your printer name > click on "Administration" option (NOT Tab) > chose "Set As Server Default"
+  
+  > [!NOTE]
+  > As port 631 is being redirected to 1024 from container (without root privileges we cannot bind ports under 1024) some steps might fail when CUPS server configuration pages will be reloading. In such case simply go back to <http://127.0.0.1:1024> and continue. Port can be changed in CUPS config file but would later require redirection to proper port using lpr command so for simplicity I'm skipping it.
 
 5. Print something on your Steam Deck saving resultant PDF to folder "/home/deck/print/jobs"
 
-> [!NOTE]
-> At this step you need to set up how your print should look like (like which pages to print etc.) - this is first and last step for modifications
-
-6. Run script "pod-print.sh" to print all files in "/home/deck/print/jobs" folder
-
-> [!CAUTION]
-> All files in "/home/deck/print/jobs" folder will be deleted after run (script is not checking if run was successful though). If you want to leave all PDFs in folder after run put # on beginning of last line of script (before "rm" command) or delete this line completely
+  > [!NOTE]
+  > At this step you need to set up how your print should look like (like which pages to print etc.) - this is first and last step for modifications
+  
+  6. Run script "pod-print.sh" to print all files in "/home/deck/print/jobs" folder
+  
+  > [!CAUTION]
+  > All files in "/home/deck/print/jobs" folder will be deleted after run (script is not checking if run was successful though). If you want to leave all PDFs in folder after run put # on beginning of last line of script (before "rm" command) or delete this line completely
 
 ## 4. Thats all
