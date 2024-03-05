@@ -72,3 +72,11 @@ Container I'm using in this method was created and is maintained by **olbat** an
   > All files in "/home/deck/print/jobs" folder will be deleted after run (script is not checking if run was successful though). If you want to leave all PDFs in folder after run put # on beginning of last line of script (before "rm" command) or delete this line completely
 
 ## 4. Thats all
+
+# Easy install
+
+Run this script into the terminal to download the scripts
+
+```bash
+curl -s https://raw.githubusercontent.com/Tymose/Steam-Deck-Printing-ROOTLESS/main/download-scripts.sh | bash
+```
